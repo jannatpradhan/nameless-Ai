@@ -1,8 +1,19 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import './Main.css';
 import { assets } from '../../assets/assets';
-
+import { Context } from '../../context/Context';
 const Main = () => {
+const [
+    recentPrompt,setRecentPrompt,
+    input,setInput,
+    prevPrompt,setPrevPrompt,
+    showResult,setShowResult,
+    loading,setLoading,
+    resultData,setResultData,
+    onSent
+    ]=useContext(Context);
+
+
   return (
     <div className="main">
         <div className="nav">
